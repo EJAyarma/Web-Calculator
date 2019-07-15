@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator</title>
+	<style type="text/css">
+		body {font-family:Ethnocentric;
+			}
+		input[class="key-number"], input[class="key-operator"], input[class="key-symbol"], input[class="key-function"]
+				{width:60px;
+				height:60px;
+				font-size:1.2em;
+				border-radius:9px;
+				margin:2px;
+				}
+		input[id="key-equal"], input[id="key-clear"] 
+				{height: 60px;
+				width: 125px;
+				font-size: 1.2em;
+				border-radius: 8px;
+				margin: 3px;
+				}
+	</style>
+	
+</head>
+<body bgcolor="e99809">
+<center><br>
+<h1><b><font color="white" style="font-size:50">Javascript calculator</font></b></h1>
+<hr size="10px" color="black">
+<div>
+	<form name="calculator">
+		<input type="button" name="display" placeholder="0" style="width:260px; font-family:Ethnocentric; height:60px; text-align:right; font-size:30; margin:3px; border-radius:8px">
+		<br>
+		<input type="button" value="7" onclick="document.calculator.display.value += '7'" class="key-number">
+		<input type="button" value="8" onclick="document.calculator.display.value += '8'" class="key-number">
+		<input type="button" value="9" onclick="document.calculator.display.value += '9'" class="key-number">
+		<input type="button" value="+" onclick="document.calculator.display.value += '+'" class="key-operator">
+		<input type="button" value="n!" onclick="window.alert(factorial(document.calculator.display.value))" class="key-function">
+		<input type="button" value="log" onclick="document.calculator.display.value = Math.log(document.calculator.display.value)/Math.log(10)" class="key-symbol">
+		<br>
+		<input type="button" value="4" onclick="document.calculator.display.value += '4'" class="key-number">
+		<input type="button" value="5" onclick="document.calculator.display.value += '5'" class="key-number">
+		<input type="button" value="6" onclick="document.calculator.display.value += '6'" class="key-number">
+		<input type="button" value="-" onclick="document.calculator.display.value += '-'" class="key-operator">
+		<input type="button" value="X^3" onclick="document.calculator.display.value = Math.pow(document.calculator.display.value, 3)" class="key-function">
+		<input type="button" value="sin" onclick="document.calculator.display.value = Math.sin(document.calculator.display.value*Math.PI/180)" class="key-function">
+		<br>
+		<input type="button" value="1" onclick="document.calculator.display.value += '1'" class="key-number">
+		<input type="button" value="2" onclick="document.calculator.display.value += '2'" class="key-number">
+		<input type="button" value="3" onclick="document.calculator.display.value += '3'" class="key-number">
+		<input type="button" value="X" onclick="document.calculator.display.value += '*'" class="key-operator">
+		<input type="button" value="X^2" onclick="document.calculator.display.value = Math.pow(document.calculator.display.value, 2)" class="key-function">
+		<input type="button" value="cos" onclick="document.calculator.display.value = Math.cos(document.calculator.display.value*Math.PI/180)" class="key-function">
+		<br>
+		<input type="button" value="0" onclick="document.calculator.display.value += '0'" class="key-number">
+		<input type="button" value="Mod" onclick="document.calculator.display.value += '%'" class="key-operator">
+		<input type="button" value="." onclick="document.calculator.display.value += '.'" class="key-operator">
+		<input type="button" value="/" onclick="document.calculator.display.value += '/'" class="key-operator">
+		<input type="button" value="(" onclick="document.calculator.display.value += '('" class="key-symbol">
+		<input type="button" value="tan" onclick="document.calculator.display.value = Math.tan(document.calculator.display.value*Math.PI/180)" class="key-function">
+		<br>
+		<input type="button" value="=" onclick="document.calculator.display.value = eval(document.calculator.display.value)" id="key-equal">
+		<input type="button" value="C" onclick="document.calculator.display.value =''" id="key-clear">
+		<input type="button" value=")" onclick="document.calculator.display.value += ')'" class="key-symbol">
+		<input type="button" value="ln" onclick="document.calculator.display.value = Math.log(document.calculator.display.value)" class="key-symbol">
+	</form></div>
+	<hr size="20" color="black">
+</center>
+
+<script type="text/javascript">
+<!--
+	window.alert("Haaa");
+	function factorial(x)
+	{
+		if (x < 0)
+			return "Invalid";
+		else 
+		{
+			if (x <= 1)
+				return 1
+			else
+			{
+				var fact = 1;
+				for (var i = 1; i <= x; i++) 
+					fact *= i;
+				return fact;
+			}
+			
+		}
+
+	} // end of function factorial
+	//-->
+</script>
+
+</body>
+
+</html>
